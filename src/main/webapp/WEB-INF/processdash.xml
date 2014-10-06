@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+
+<dashboard-add-on>
+
+	<!-- This file can contain any number of "script-item" tags. Each item will 
+		be displayed in the script/form/report browser as appropriate. -->
+
+	<script-item>
+		<!-- display this text in the list of scripts/reports -->
+		<display-name>Reporting Demonstrations</display-name>
+
+		<!-- this is the URI of the target page in this web app -->
+		<uri>/index.html</uri>
+
+		<!-- display this item for both team and master projects -->
+		<context>Team Project Root</context>
+		<context>Master Project Root</context>
+	</script-item>
+
+</dashboard-add-on>
