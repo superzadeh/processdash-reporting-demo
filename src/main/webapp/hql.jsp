@@ -3,6 +3,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <html>
+<head>
+<title>HQL Query</title>
+<style>
+div#sql.collapsed div    { display:none }
+div#sql.expanded  p#link { display:none }
+</style>
+</head>
 <body>
 
 <h1>HQL Query</h1>
@@ -60,7 +67,34 @@ Enter an HQL Query:<br/>
 </c:otherwise>
 </c:choose>
 
-</c:if>
+
+<%--
+  Note: "lastSql" functionality was added in Process Dashboard version 2.1.3.
+  The block of code below will generate no output on earlier versions.  To
+  see raw SQL statements, please install the latest version of the dashboard.
+--%>
+
+<c:catch var="lastSqlException">
+<c:set var="sql" value="${pdash.query.lastSql}"/>
+</c:catch>
+
+<c:if test="${not empty sql}">
+<div id="sql" class="collapsed">
+
+<p id="link" style="margin-top:1em">
+<a href="#" onclick="this.parentNode.parentNode.className = 'expanded'; return false;"><i>Show raw SQL...</i></a>
+</p>
+
+<div>
+<h2>Raw SQL</h2>
+<p>Hibernate executed the following SQL statements during the execution of your query:</p>
+<pre><c:out value="${sql}"/></pre>
+</div>
+
+</div>
+</c:if> <%-- not empty sql --%>
+
+</c:if> <%-- not empty param.q --%>
 
 </body>
 </html>
