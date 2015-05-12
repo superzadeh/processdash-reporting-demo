@@ -29,12 +29,24 @@
 
 <c:set var="processId" value="${pdash.data['Process_ID']}"/>
 
-<c:forEach var="row" items="${pdash.query['
+<c:choose>
+<c:when test="${empty processId}">
+<c:set var="rows" value="${pdash.query['
+    select t, t.planItem, t.planItem.phase 
+    from TimeLogFact as t
+    order by t.startDate']}"/>
+</c:when>
+<c:otherwise>
+<c:set var="rows" value="${pdash.query['
     select t, t.planItem, phase 
     from TimeLogFact as t
     left join t.planItem.phase.mapsToPhase phase
     where phase.process.identifier = ?
-    order by t.startDate'][processId]}">
+    order by t.startDate'][processId]}"/>
+</c:otherwise>
+</c:choose>
+
+<c:forEach var="row" items="${rows}">
 
 <c:set var="time" value="${row[0]}"/>
 <c:set var="planItem" value="${row[1]}"/>
