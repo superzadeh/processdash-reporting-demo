@@ -2,66 +2,63 @@
 <head>
 <title>Reporting Demonstrations</title>
 <style>
- dd { margin-bottom: 1em }
+dd {
+	margin-bottom: 1em
+}
 </style>
 </head>
 <body>
-
-<h1>Reporting Demonstrations</h1>
-
-<p>The following examples demonstrate how third-party developers can write
-web applications to query data from the dashboard and display reports:</p>
-
-<dl>
-
-<dt><a href="taskList.jsp">Task List</a><dt>
-
-    <dd>The list of tasks in this project that have been assigned to
-    individuals.  Demonstrates an HQL query against the TaskStatusFact
-    table.</dd>
-
-<dt><a href="timeLog.jsp">Time Log</a></dt>
-
-    <dd>The time log for this project. Demonstrates an HQL query against the
-    TimeLogFact table, as well as the use of mapped process phases.</dd>
-
-<dt><a href="defectLog.jsp">Defect Log</a></dt>
-
-    <dd>The defect log for this project. Demonstrates an HQL query against the
-    DefectLogFact table.</dd>
-
-<dt><a href="planSummary.jsp">Plan Summary</a></dt>
-
-    <dd>A partial plan summary for this project. Demonstrates the retrieval of
-    precalculated metrics from the data repository.</dd>
-
-<dt><a href="projectData">Component Data Dump</a></dt>
-
-    <dd>A CSV table of project data by component, in a CSV format that can be
-    opened in Excel.  Demonstrates the execution of multiple HQL queries from
-    Java servlet logic (rather than directly from a JSP).</dd>
-
-</dl>
-
-<h2>Useful Tools</h2>
-
-<p>The following links can be helpful for report developers:</p>
-
-<dl>
-
-<dt><a href="hql.jsp">HQL Query Tester</a></dt>
-
-    <dd>This page will allow you to enter and run an HQL query. It can be a
-    helpful way to test and debug problems with HQL syntax, content, etc.</dd>
-
-<dt><a href="/control/reloadWARs">Reload WAR Files</a></dt>
-
-    <dd>If you are rebuilding WAR files and republishing them to a running
-    dashboard, you can click the link above to reload the WAR files that
-    have changed. (Note this link will not detect newly added WAR files; to
-    accomplish that you must restart the dashboard.)</dd>
-
-</dl>
-
+	<h1>Reporting Demonstrations</h1>
+	<p>The following examples demonstrate how third-party developers
+		can write web applications to query data from the dashboard and
+		display reports:</p>
+	<dl>
+		<dt>
+			<a href="taskList.jsp">Task List</a>
+		<dt>
+		<dd>The list of tasks in this project that have been assigned to
+			individuals. Demonstrates an HQL query against the TaskStatusFact
+			table.</dd>
+		<dt>
+			<a href="timeLog.jsp">Time Log</a>
+		</dt>
+		<dd>The time log for this project. Demonstrates an HQL query
+			against the TimeLogFact table, as well as the use of mapped process
+			phases.</dd>
+		<dt>
+			<a href="defectLog.jsp">Defect Log</a>
+		</dt>
+		<dd>The defect log for this project. Demonstrates an HQL query
+			against the DefectLogFact table.</dd>
+		<dt>
+			<a href="planSummary.jsp">Plan Summary</a>
+		</dt>
+		<dd>A partial plan summary for this project. Demonstrates the
+			retrieval of precalculated metrics from the data repository.</dd>
+		<dt>
+			<a href="projectData">Component Data Dump</a>
+		</dt>
+		<dd>A CSV table of project data by component, in a CSV format
+			that can be opened in Excel. Demonstrates the execution of multiple
+			HQL queries from Java servlet logic (rather than directly from a
+			JSP).</dd>
+	</dl>
+	<h2>Useful Tools</h2>
+	<p>The following links can be helpful for report developers:</p>
+	<dl>
+		<dt>
+			<a href="hql.jsp">HQL Query Tester</a>
+		</dt>
+		<dd>This page will allow you to enter and run an HQL query. It
+			can be a helpful way to test and debug problems with HQL syntax,
+			content, etc.</dd>
+		<dt>
+			<a href="/control/reloadWARs">Reload WAR Files</a>
+		</dt>
+		<dd>If you are rebuilding WAR files and republishing them to a
+			running dashboard, you can click the link above to reload the WAR
+			files that have changed. (Note this link will not detect newly added
+			WAR files; to accomplish that you must restart the dashboard.)</dd>
+	</dl>
 </body>
 </html>
