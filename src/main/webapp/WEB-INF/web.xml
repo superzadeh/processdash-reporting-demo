@@ -17,5 +17,5 @@
 		<servlet-name>projectDataServlet</servlet-name>
 		<url-pattern>/projectData</url-pattern>
 	</servlet-mapping>
-
+	
 </web-app>

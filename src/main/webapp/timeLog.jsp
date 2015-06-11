@@ -59,7 +59,9 @@ table {
 			</tr>
 		</c:forEach>
 	</table>
-	<% // including the following line provides one-click export to Excel %>
+	<%
+	    // including the following line provides one-click export to Excel
+	%>
 	<a href="/reports/excel.iqy">Export to Excel</a>
 </body>
 </html>

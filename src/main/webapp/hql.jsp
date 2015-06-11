@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <html>
 <head>
@@ -23,8 +23,7 @@ div#sql.expanded  p#link {
 		<textarea name="q" rows=10 cols=60><c:out
 				value="${param.q}" /></textarea>
 
-		<br />
-		<input type="submit" name="run" value="Execute Query" />
+		<br /> <input type="submit" name="run" value="Execute Query" />
 	</form>
 	<c:if test="${not empty param.q}">
 		<h2>Results</h2>
@@ -62,16 +61,15 @@ div#sql.expanded  p#link {
 			</c:otherwise>
 		</c:choose>
 		<%--
-  Note: "lastSql" functionality was added in Process Dashboard version 2.1.3.
-  The block of code below will generate no output on earlier versions.  To
-  see raw SQL statements, please install the latest version of the dashboard.
---%>
+		  Note: "lastSql" functionality was added in Process Dashboard version 2.1.3.
+		  The block of code below will generate no output on earlier versions.  To
+		  see raw SQL statements, please install the latest version of the dashboard.
+		--%>
 		<c:catch var="lastSqlException">
 			<c:set var="sql" value="${pdash.query.lastSql}" />
 		</c:catch>
 		<c:if test="${not empty sql}">
 			<div id="sql" class="collapsed">
-
 				<p id="link" style="margin-top: 1em">
 					<a href="#"
 						onclick="this.parentNode.parentNode.className = 'expanded'; return false;"><i>Show

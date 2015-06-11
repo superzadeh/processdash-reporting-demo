@@ -151,7 +151,9 @@ td.plan, td.act {
 					value="${pdash.data.string['Defects Removed']}" /></td>
 		</tr>
 	</table>
-	<% // including the following line provides one-click export to Excel %>
+	<%
+	    // including the following line provides one-click export to Excel
+	%>
 	<a href="/reports/excel.iqy?fullPage">Export to Excel</a>
 </body>
 </html>
